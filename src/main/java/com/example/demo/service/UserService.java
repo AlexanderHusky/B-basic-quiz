@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.example.demo.dao.Dataprovider.users;
+
 @Service
 public class UserService {
 
@@ -21,4 +23,9 @@ public class UserService {
                 .filter(user -> user.getId()==id)
                 .findAny().get();
     }
+
+    public void addUser(User user) {
+        Dataprovider.users.add(user);
+    }
+
 }
