@@ -27,5 +27,4 @@ public class UserService {
     public void addUser(User user) {
         Dataprovider.users.add(user);
     }
-
 }

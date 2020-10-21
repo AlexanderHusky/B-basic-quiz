@@ -13,6 +13,9 @@ public class EducationService {
     public List<Education> getUserEducationList(long id) {
         List<Education> educations = Dataprovider.educationList;
         return educations.stream().filter(education -> education.getUserId() == id).collect(Collectors.toList());
+    }
 
+    public void addUserEducation(Education education) {
+        Dataprovider.educationList.add(education);
     }
 }
