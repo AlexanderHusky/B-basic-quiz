@@ -21,6 +21,7 @@ public class UserService {
 
         return users.stream()
                 .filter(user -> user.getId()==id)
+                //TODO GTB-知识点: - 这里的写法表明你对 Optional API 不熟悉
                 .findAny().get();
     }
 

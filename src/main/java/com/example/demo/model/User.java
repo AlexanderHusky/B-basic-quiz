@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import lombok.Data;
 
+//TODO GTB-工程实践: - User.java:5 未删除的无用代码
 import java.util.ArrayList;
 
 @Data

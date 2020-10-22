@@ -17,12 +17,15 @@ import java.util.List;
 public class UserController {
 
 
+    //TODO GTB-知识点: - UserController.java:20 推荐是要用 构造函数注入
     @Autowired
     private UserService userService;
 
+    //TODO GTB-知识点: - 如果多个方法的 path 有一样的前缀，可以提到 class level 去统一设置
     @GetMapping("/users/{id}")
     public User getUserInfo(@PathVariable long id) {
 
+        //TODO GTB-工程实践: - UserController.java:26 这里直接 return 就好了，不用定义 result。
         User result = userService.findUserByIb(id);
         return result;
     }
